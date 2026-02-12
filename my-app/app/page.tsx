@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { Send, MessageSquare, Plus, Trash2, Menu, X, Sparkles } from 'lucide-react';
+import { Send, MessageSquare, Plus, Trash2, Menu, Sparkles } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
 interface Message {
@@ -111,7 +111,7 @@ export default function Home() {
             : chat
         )
       );
-    } catch (error) {
+    } catch {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
@@ -234,7 +234,7 @@ export default function Home() {
               </div>
               <h2 className="text-3xl font-semibold mb-2">How can I help you today?</h2>
               <p className="text-gray-400 text-center max-w-md">
-                I'm a ChatGPT clone powered by a free AI API. Ask me anything!
+                I&apos;m a ChatGPT clone powered by a free AI API. Ask me anything!
               </p>
             </div>
           ) : (
